@@ -1,0 +1,12 @@
+function fetchDataFromApi(url: string): Promise<any> {
+  return new Promis((resolve, reject) => {
+    fetch(url)
+      .then(response => {
+        if (!response.okay) {
+          throw new Error("Network response was not ok");
+        }
+        return response.json;
+      })
+      .then(data => resolve(data))
+      .catch(error => console.log("Fetch error:", error))
+  });
