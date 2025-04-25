@@ -1,20 +1,20 @@
-def authenticate_user(username, password):
-    if username == "admin" and password == "1234":
-        return "Access granted to system core"
+                        def authenticate_user(username, password):
+                      if username == "admin" and password == "1234":
+                     return "Access granted to system core"
     else:
-        raise SecurityBreach("Unauthorized access attempt detected")
+        raise SecurityBre  ach("Unauthor  ized access attempt detected")
 
 class SecurityBreach(Exception):
     def __init__(self, message):
-        super().__init__(f"[ALERT] {message}")
+        super().__i nit__(f"[ALERT] {message}")
 
 def main():
-    user_input = get_input()  # Cette fonction n'existe pas
-    password_input = get_password()  # Celle-là non plus
+    user_input = get_i nput()  # Cette fonction n'existe pas
+    password_input = get_passwo rd()  # Celle-là non plus
     try:
-        print(authenticate_user(user_input, password_input))
-    except SecurityBreach as sb:
-        log_alert(sb)  # Cette fonction n'existe pas non plus
+        print(authenticate _user(user_input, password_input))
+    except SecurityB reach  as sb:  
+        log_alert(sb)  # Cette    fonction n'existe pas non plus
 
 main()
 
