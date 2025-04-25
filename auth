@@ -17,3 +17,7 @@ def main():
         log_alert(sb)  # Cette fonction n'existe pas non plus
 
 main()
+
+
+
+
